@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verabrief — Cyber Intelligence for Executives</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#020818" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="logo-text">Vera<span>Brief</span></div>
+    </div>
+    <div class="badge">Private Beta</div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="hero-eyebrow">Cyber intelligence, translated</div>
+    <h1>Your security team speaks <em>threat codes</em>.<br>Leadership needs <em>decisions</em>.</h1>
+    <p class="hero-sub">
+      Paste any cybersecurity report. Get a one-page executive brief — financial risk,
+      business impact, and clear next steps — in under 60 seconds.
+    </p>
+    <div class="cta-row">
+      <button class="btn-primary" onclick="document.querySelector('.demo-wrap').scrollIntoView({ behavior: 'smooth' })">
+        Try It Live ↓
+      </button>
+      <button class="btn-ghost" onclick="document.querySelector('.waitlist-wrap').scrollIntoView({ behavior: 'smooth' })">
+        Join Waitlist
+      </button>
+    </div>
+  </div>
+
+  <!-- ── HOW IT WORKS ── -->
+  <div class="flow-wrap">
+    <div class="flow-label">How Verabrief works</div>
+    <div class="flow">
+
+      <div class="flow-step">
+        <div class="flow-icon red-bg">📄</div>
+        <div class="flow-step-title">Technical Report</div>
+        <div class="flow-step-sub">SIEM alerts, vuln scans, incident summaries — any format</div>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-step highlight">
+        <div class="verabrief-tag">Verabrief</div>
+        <div class="flow-icon teal-bg">⚡</div>
+        <div class="flow-step-title">AI Translation</div>
+        <div class="flow-step-sub">Strips jargon, quantifies risk, maps to business impact</div>
+      </div>
+
+      <div class="flow-arrow active-arrow">→</div>
+
+      <div class="flow-step">
+        <div class="flow-icon green-bg">✅</div>
+        <div class="flow-step-title">Executive Brief</div>
+        <div class="flow-step-sub">Board-ready summary with financial exposure and action items</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── STATS ── -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-num">73%</div>
+        <div class="stat-desc">of SMBs can't understand their own security reports</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4,000</div>
+        <div class="stat-desc">small businesses hit by cyberattacks every single day</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">60%</div>
+        <div class="stat-desc">close within 6 months of a successful attack</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROBLEM / SOLUTION ── -->
+  <div class="ps-wrap">
+    <div class="ps-grid">
+
+      <div class="ps-card">
+        <div class="ps-icon">🔴</div>
+        <div class="ps-title">The problem</div>
+        <div class="ps-item">
+          <div class="ps-dot red"></div>
+          <div class="ps-item-text"><strong>Your best operators waste nights</strong> rewriting SIEM output into exec summaries instead of fixing the incident</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot red"></div>
+          <div class="ps-item-text"><strong>Boards get technical firehoses</strong> — CVE scores, CVSS ratings, IOCs — with no financial context or clear decision</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot red"></div>
+          <div class="ps-item-text"><strong>Reports sit unread and unfiled</strong> because non-technical leaders can't parse them, so warnings go unheeded</div>
+        </div>
+      </div>
+
+      <div class="ps-card solution">
+        <div class="ps-icon">⚡</div>
+        <div class="ps-title teal">Verabrief fixes this</div>
+        <div class="ps-item">
+          <div class="ps-dot teal"></div>
+          <div class="ps-item-text"><strong>Paste any report</strong> — PDF, plain text, SIEM export — and get a structured brief in under 60 seconds</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot teal"></div>
+          <div class="ps-item-text"><strong>Financial risk, plain English</strong> — dollar exposure estimates, compliance impact, reputation risk — all quantified</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot teal"></div>
+          <div class="ps-item-text"><strong>Clear action items</strong> — prioritized by urgency, written for whoever needs to approve or act on them</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── LIVE DEMO ── -->
+  <div class="demo-wrap">
+    <div class="demo-label">// Live demo — paste a real report or try a sample</div>
+    <div class="demo-grid">
+
+      <!-- INPUT PANEL -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><span class="dot"></span>Report Input</div>
+        </div>
+        <div class="panel-body">
+          <div class="sample-chips">
+            <div class="chip" onclick="loadSample('ransomware')">🦠 Ransomware</div>
+            <div class="chip" onclick="loadSample('phishing')">🎣 Phishing</div>
+            <div class="chip" onclick="loadSample('vuln')">🔍 Vuln Scan</div>
+            <div class="chip" onclick="loadSample('breach')">💾 Data Breach</div>
+          </div>
+          <div class="tabs">
+            <button class="tab active">Paste Text</button>
+            <button class="tab" onclick="alert('PDF upload available in the full app')">Upload PDF</button>
+          </div>
+          <textarea
+            class="report-input"
+            id="reportInput"
+            placeholder="Paste your technical security report here...
+
+Example: SIEM alert, vulnerability scan, incident report, or threat intelligence summary.
+
+Or click a sample above to try with a real-world scenario."
+          ></textarea>
+          <button class="translate-btn" id="translateBtn" onclick="translate()">
+            <span id="btnText">Generate Executive Brief</span>
+            <div class="spinner" id="spinner"></div>
+          </button>
+        </div>
+      </div>
+
+      <!-- OUTPUT PANEL -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><span class="dot"></span>Executive Brief</div>
+          <div class="panel-tag">VERABRIEF OUTPUT</div>
+        </div>
+        <div class="panel-body">
+
+          <div class="output-empty" id="outputEmpty">
+            <div class="output-empty-icon">📋</div>
+            <p>Your board-ready brief will appear here</p>
+          </div>
+
+          <div class="brief" id="briefOutput">
+            <div class="brief-meta">
+              <div class="brief-date" id="briefDate"></div>
+              <div class="risk-badge" id="riskBadge"></div>
+            </div>
+            <div class="impact-grid">
+              <div class="impact-card">
+                <div class="impact-label">Financial Exposure</div>
+                <div class="impact-value red" id="impactFinancial"></div>
+                <div class="impact-sub" id="impactFinancialSub"></div>
+              </div>
+              <div class="impact-card">
+                <div class="impact-label">Systems Affected</div>
+                <div class="impact-value yellow" id="impactSystems"></div>
+                <div class="impact-sub" id="impactSystemsSub"></div>
+              </div>
+              <div class="impact-card">
+                <div class="impact-label">Response Window</div>
+                <div class="impact-value green" id="impactWindow"></div>
+                <div class="impact-sub" id="impactWindowSub"></div>
+              </div>
+              <div class="impact-card">
+                <div class="impact-label">Compliance Risk</div>
+                <div class="impact-value" id="impactCompliance"></div>
+                <div class="impact-sub" id="impactComplianceSub"></div>
+              </div>
+            </div>
+            <div class="brief-section">
+              <div class="brief-section-label">Executive Summary</div>
+              <div class="brief-section-content" id="execSummary"></div>
+            </div>
+            <div class="brief-section">
+              <div class="brief-section-label">Immediate Actions Required</div>
+              <ul class="actions-list" id="actionsList"></ul>
+            </div>
+            <button class="export-btn">↓ Export as PDF Report</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── WAITLIST ── -->
+  <div class="waitlist-wrap">
+    <h2>Get early access</h2>
+    <p class="waitlist-sub">Verabrief is in private beta. Join the waitlist and be first in line.</p>
+    <div class="waitlist-card">
+      <div class="waitlist-pill">
+        <span class="wl-pill-dot"></span>
+        Limited seats · Private Beta
+      </div>
+      <form class="wf" onsubmit="joinWaitlist(event)">
+        <label>
+          <span class="field-label">Work email</span>
+          <input type="email" placeholder="you@company.com" required />
+        </label>
+        <label>
+          <span class="field-label">Your role</span>
+          <select required>
+            <option value="">Select your role</option>
+            <option>CISO / Head of Security</option>
+            <option>CIO / CTO</option>
+            <option>Security Lead / Manager</option>
+            <option>Incident Response / SOC Lead</option>
+            <option>Business Owner / Executive</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          <span class="field-label">Team size</span>
+          <select required>
+            <option value="">Approximate security team size</option>
+            <option>Solo / no dedicated team</option>
+            <option>2–5</option>
+            <option>5–20</option>
+            <option>20+</option>
+          </select>
+        </label>
+        <button type="submit" class="wl-btn" id="wlBtn">Request Early Access</button>
+        <p class="wl-meta" id="wlMeta">No spam. Only beta access and product updates.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
